@@ -15,7 +15,7 @@ toggleBtn.addEventListener('click', () => {
     if (bool === true) 
     {
         // changing the images
-        img.src = "./images/cup-light.png";
+        img.src = "/iProduct/images/cup-light.png";
 
         // changing the icon of the page
         icon.classList.remove('fa-moon');
@@ -32,7 +32,7 @@ toggleBtn.addEventListener('click', () => {
     else
     {
         // Changing the image
-        img.src = "/images/cup-dark.png";
+        img.src = "/iProduct/images/cup-dark.png";
 
         // changing icon of the page
         icon.classList.remove('fa-sun');
