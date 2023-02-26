@@ -11,7 +11,7 @@ export default function Body() {
             </h1>
         </div>
         <div class="main-img">
-            <img src="./images/cup-dark.png" alt="BlaCK"/>
+            <img src="/images/cup-dark.png" alt="BlaCK"/>
         </div>
         <div class="text">
             <div class="text-left">
