@@ -1,3 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>iProduct</title>
+        <script src="https://kit.fontawesome.com/ca79ff3647.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#" class="brand">
+                    <span>Gogoi</span>
+                    Drinks. 
+                </a>
+                <div class="toggle">
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+            </nav>
+            <div class="header-body">
+                <div>
+                    <h1>
+                        <span class="toggle-text">
+                            Coffee
+                        </span> <br />
+                    </h1>
+                </div>
+                <div class="main-img">
+                    <img src="./images/cup-dark.png" alt="BlaCK"/>
+                </div>
+                <div class="text">
+                    <div class="text-left">
+                        <div>
+                            <h3><span class="toggle-text">
+                                Coffee</span> Lovers Lifestyles
+                            </h3>
+                            <p>
+                                People say money can't buy happiness. They lie. Money buys <span class="toggle-text">Coffee</span>, <span class="toggle-text">Coffee</span> makes Me happy! 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="text-right">
+                            <div>
+                                <h3>The design</h3>
+                                <p>
+                                    Learn more what makes our <span class="toggle-text">Coffee</span> unique and different. Let's watch the video
+                                </p>
+                            </div>
+                        </div>
+                        <div class="play-btn">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="links">
+                    <a href="#" class="main-link">
+                        <span>Explore Now</span>
+                    </a>
+                    <a href="#">Credit</a>
+                </div>
+            </div>
+            <h1 class="background-text">
+                <span class="toggle-text">
+                    Coffee
+                </span>
+            </h1>
+        </header>
+
+        <script src="/js/script.js"></script>
+    </body>
+</html>
+
+
+
+
+
+javascript
+// Get elements
+const img = document.querySelector('.main-img img');
+const toggleText = document.querySelectorAll('.toggle-text');
+const toggleBtn = document.querySelector('.toggle');
+const icon = document.querySelector('.fa-regular');
+
+// Toggle variable
+let bool = true;
+
+toggleBtn.addEventListener('click', () => {
+    // toggle theme
+    document.body.classList.toggle('light-theme');
+
+    // if the page is in dark mode
+    if (bool === true) 
+    {
+        // changing the images
+        img.src = "./images/cup-light.png";
+
+        // changing the icon of the page
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        bool = false;
+
+        // changing text content
+        toggleText.forEach(text => {
+            text.innerHTML = "Milkshake";
+        });
+
+    }
+    // else if the page is in light mode
+    else
+    {
+        // Changing the image
+        img.src = "/images/cup-dark.png";
+
+        // changing icon of the page
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        bool = true;
+
+
+        // changing text content
+        toggleText.forEach(text => {
+            text.innerHTML = "Coffee";
+        });
+    }
+});
+
+
+
+css
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 /* Theme colors variables */
